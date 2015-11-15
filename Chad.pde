@@ -22,7 +22,7 @@ void setup() {
   size(1200,779);
 
   //make the chads available
-  chad=loadImage("Chads Face.png");
+  chad=loadImage("Better Chads Face.png");
   face=loadImage("Chad_background.jpg");
   chad2=loadImage("Chad_2.png");
 
