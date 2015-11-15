@@ -1,6 +1,6 @@
 //Chad
 
-//second project
+//side project
 
 //variables
 PImage face;
