@@ -76,7 +76,8 @@ if(keyPressed) {
   if(key == 'C'||key == 'c'){ 
 image(chad3, 0, 0, width, height);
 goodbye.play();
-
+background.stop();
+noLoop();
   }
 }
 }
