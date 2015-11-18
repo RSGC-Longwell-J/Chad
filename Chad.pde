@@ -15,7 +15,7 @@ float y2=300;
 //sound
 import processing.sound.*;
 SoundFile photograph;
-SoundFile
+SoundFile goodbye;
 //things that run once
 void setup() {
 
@@ -35,10 +35,11 @@ void setup() {
   image(face, 0, 0);
 
   //set framerate
-  frameRate(0.75);
+  frameRate(0.75); 
 
   //make the sound accesable
   photograph=new SoundFile(this, "ramenhair.mp3");
+  goodbye=new SoundFile(this, "bye.mp3");
 }
 
 //things that run multipe times
@@ -56,22 +57,26 @@ image(chad2, x2, y2, width/7, height/5);
 }
 
 //randomize x and y
-x=random(50,1100);
-y=random(50,610);
+x=random(10,1100);
+y=random(10,610);
 
-x2=random(50, 1100);
-y2=random(50, 610);
+x2=random(5, 1100);
+y2=random(5, 610);
 
 //play the sound
 photograph.play();
 
+
 }
 
-void keyPressed(){
+void mousePressed(){
   
 image(chad3, 0, 0, width, height);
+goodbye.play();
+photograph.stop();
 
 }
-  
 
+void mousereleased(){
   
+}
