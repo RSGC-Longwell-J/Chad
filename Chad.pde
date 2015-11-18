@@ -16,6 +16,7 @@ float y2=300;
 import processing.sound.*;
 SoundFile photograph;
 SoundFile goodbye;
+SoundFile background;
 //things that run once
 void setup() {
 
@@ -36,10 +37,15 @@ void setup() {
 
   //set framerate
   frameRate(0.75); 
-
+ 
   //make the sound accesable
   photograph=new SoundFile(this, "ramenhair.mp3");
   goodbye=new SoundFile(this, "bye.mp3");
+  background=new SoundFile(this, "Nickelback photograph.mp3");
+  
+   //play the song in the background
+  background.play();
+  background.amp(0.3);
 }
 
 //things that run multipe times
@@ -66,17 +72,11 @@ y2=random(5, 610);
 //play the sound
 photograph.play();
 
-
-}
-
-void mousePressed(){
-  
+if(keyPressed) {
+  if(key == 'C'||key == 'c'){ 
 image(chad3, 0, 0, width, height);
 goodbye.play();
-photograph.stop();
 
+  }
 }
-
-void mousereleased(){
-  
 }
