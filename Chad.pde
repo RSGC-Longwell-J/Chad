@@ -36,7 +36,7 @@ void setup() {
   image(face, 0, 0);
 
   //set framerate
-  frameRate(0.75); 
+  frameRate(3); 
  
   //make the sound accesable
   photograph=new SoundFile(this, "ramenhair.mp3");
@@ -60,6 +60,7 @@ image(chad, x, y, width/7, height/5);
 
 if(frameCount%2==1){
 image(chad2, x2, y2, width/7, height/5);
+tint(random(0,255), random(0,255), random(0,255), random(100,255));
 }
 
 //randomize x and y
@@ -71,7 +72,6 @@ y2=random(5, 610);
 
 //play the sound
 photograph.play();
-
 if(keyPressed) {
   if(key == 'C'||key == 'c'){ 
 image(chad3, 0, 0, width, height);
